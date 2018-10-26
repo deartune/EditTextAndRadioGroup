@@ -46,17 +46,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         int id = rg0.getCheckedRadioButtonId();
-        int id1 = rg1.getCheckedRadioButtonId();
-        //getCheckedRadioButtonId() 의 리턴값은 선택된 RadioButton 의 id 값.
         RadioButton rb = (RadioButton) findViewById(id);
+        int id1 = rg1.getCheckedRadioButtonId();
         RadioButton rb1 = (RadioButton) findViewById(id1);
 
+        switch (v.getId()) {
+            case R.id.button1 :
+
+                String text = rb.getText().toString();
+                text = "성별 : " + text;
+                tv.setText(text);
+                 break ;
+
+             case R.id.button2 :
+
+                 String text1 = rb1.getText().toString();
+                 text1 = "직업 : " + text1;
+                 tv.setText(text1); break ;
+            case R.id.button3 :
+                String text2 = rb.getText().toString() + rb1.getText().toString();
+                text2 = "all : " + text2;
+                tv.setText(text); break ;
 
 
-        String text = rb.getText().toString() + rb1.getText().toString();
-        text = "성별 : " + text;
-        tv.setText(text);
-    }
+
+
+
+
+
 
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
