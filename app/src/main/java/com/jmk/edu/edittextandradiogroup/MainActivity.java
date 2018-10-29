@@ -38,11 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rg1 = (RadioGroup) findViewById(R.id.job);
         tv = (TextView) findViewById(R.id.textView2);
 
-
-
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -68,11 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String text2 = "성별:"+ rb.getText().toString() + "직업:"+rb1.getText().toString();
                 text2 = "이름 :"+name +"나이 : "+age + text2;
                 tv.setText(text2); break ;}}
-
-
-
-
-
 
 
 
